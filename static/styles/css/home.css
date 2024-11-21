@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background: #fff; /* Ensure navbar remains visible */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds slight elevation */
+}
+
+.navbar-nav .nav-link {
+    color: #4a4a4a;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #000; /* Highlight active or hovered links */
+    font-weight: bold;
+}
+
+.navbar .btn {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+.hero-section {
+    position: relative;
+    background: url('https://placehold.co/1920x1080') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns text and image on either side */
+    padding: 2rem;
+    color: #fff;
+    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Inherits the background image */
+    filter: blur(8px); /* Blurs only the background */
+    z-index: 1; /* Places the blur layer below content */
+    transform: scale(1.1); /* Prevents visible edges after blurring */
+}
+
+.hero-section .content,
+.hero-section .image-container {
+    position: relative;
+    z-index: 2; /* Ensures the text and image are above the blurred background */
+}
+
+.hero-section .content {
+    max-width: 600px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-section .image-container {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+}
+
+.hero-section .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Make the image container disappear on small screens */
+@media (max-width: 768px) {
+    .hero-section .image-container {
+        display: none;
+    }
+}
