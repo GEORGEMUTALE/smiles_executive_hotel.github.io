@@ -283,3 +283,194 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
 }
+
+.amenities {
+    text-align: center;
+    margin-top: 50px;
+}
+.amenities h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.amenities .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.amenities .item {
+    margin: 0 15px;
+}
+.amenities .item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* General Styles for the Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Section Background */
+#contact {
+    background-color: #ededed;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo-placeholder {
+    margin-bottom: 30px;
+}
+
+.logo-placeholder img.logo {
+    max-width: 150px;
+    display: inline-block;
+}
+
+/* General Title Styling */
+#contact h5 {
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Content Styles (similar to previous CSS) */
+#contact p, #contact ul {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+#contact ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contact ul li a:hover {
+    color: #0056b3;
+}
+
+/* Newsletter Form */
+#contact .newsletter {
+    display: flex;
+    margin-top: 10px;
+}
+
+#contact .newsletter input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+#contact .newsletter button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact .newsletter button:hover {
+    background-color: #0056b3;
+}
+
+/* Social Icons */
+#contact .social-icons a {
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#contact .social-icons a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact .row > div {
+        margin-bottom: 20px;
+    }
+}
+
+#order-voucher .step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#order-voucher .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#order-voucher .step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: inline-block;
+}
+
+#room-prices {
+    background-color: #f8f9fa;
+}
+
+.room-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.room-description p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.room-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+}
