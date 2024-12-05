@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,26 +6,34 @@ body {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-sizing: border-box;
+/* Navbar Styles */
+.navbar-toggler {
+    border-color: #fff; /* White border */
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* SVG icon with white lines */
+}
+
+
 .navbar {
+    background-color: #0f1724; 
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    background: #fff; /* Ensure navbar remains visible */
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds slight elevation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight elevation effect */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition */
+}
+
+.navbar.hidden {
+    transform: translateY(-100%); /* Moves navbar out of view */
+    opacity: 0; /* Optional: makes the transition more fluid */
 }
 
 .navbar-nav .nav-link {
-    color: #4a4a4a;
+    color: #d96b11; /* Orange link color */
     font-size: 1rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
@@ -32,26 +41,82 @@ body {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #000; /* Highlight active or hovered links */
+    color: #d96b11; /* Highlight active or hovered links */
     font-weight: bold;
 }
 
-.navbar .btn {
-    background-color: #4a4a4a;
+.navbar-nav .btn {
+    background-color: #d96b11; /* Orange button */
     color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 1rem; /* Spacing between button and other nav links */
+    border: none;
+    transition: background-color 0.3s ease;
 }
+
+.navbar-nav .btn:hover {
+    background-color: #c05e0f; /* Slightly darker orange on hover */
+}
+
+/* Logo Styles */
+.logo-img {
+    height: 90px; /* Fixed height */
+    width: 170px;
+    object-fit: contain; 
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #0f1724; 
+    border: 1px solid #333; /* Optional: Subtle border */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff; /* White text for dropdown items */
+    font-size: 1rem;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #c05e0f; /* Orange highlight on hover */
+    background-color: #222; /* Slightly lighter background */
+}
+
+/* Offcanvas Styles */
+.offcanvas {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.offcanvas .offcanvas-title {
+    color: #c05e0f; /* Set the title color to orange */
+    text-align: center; /* Center-align the title */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+}
+
+.offcanvas .btn-close {
+    color: #fff; 
+}
+
+.offcanvas-body .btn {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 
 .hero-section {
     position: relative;
-    background: url('https://placehold.co/1920x1080') no-repeat center center;
+    background: url('/static/images/photo_2024-12-05_13-01-15.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Aligns text and image on either side */
+    justify-content: space-between; 
     padding: 2rem;
     color: #fff;
-    overflow: hidden; /* Ensures the pseudo-element stays within bounds */
+    overflow: hidden; 
 }
 
 .hero-section::before {
@@ -62,7 +127,7 @@ body {
     right: 0;
     bottom: 0;
     background: inherit; /* Inherits the background image */
-    filter: blur(8px); /* Blurs only the background */
+    filter: blur(3px); /* Blurs only the background */
     z-index: 1; /* Places the blur layer below content */
     transform: scale(1.1); /* Prevents visible edges after blurring */
 }
@@ -88,21 +153,12 @@ body {
     margin-bottom: 2rem;
 }
 
-.hero-section .btn {
-    background-color: #4a4a4a;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-}
-
 .hero-section .image-container {
-    width: 400px;
-    height: auto;
+    width: 600px; /* Increase the width */
+    height: auto; 
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-section .image-container img {
@@ -110,12 +166,89 @@ body {
     height: auto;
 }
 
+
+/* button hero-section*/
+/* Default Slanted Button Styles */
+.hero-section .btn {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    padding: 1rem 2rem; /* Spacious padding */
+    font-size: 1.2rem; /* Larger font size */
+    border: none;
+    border-radius: 10px; /* Slight rounded corners */
+    cursor: pointer;
+    display: flex; /* Flexbox to center the content */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transform: skew(-15deg); /* Slant the button */
+    position: relative; /* To control icon placement */
+}
+
+/* Button Hover Effect */
+.hero-section .btn:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
+    transform: skew(-15deg) translateY(-5px); /* Keep the slant and add slight lift */
+}
+
+/* Button Icon Animation */
+.hero-section .btn i {
+    margin-left: 10px; /* Space between text and icon */
+    transition: transform 0.3s ease; /* Smooth icon transition */
+}
+
+/* Hover Animation for Icon */
+.hero-section .btn:hover i {
+    transform: translateX(5px); /* Move icon to the right */
+}
+
+/* Focus Effect */
+.hero-section .btn:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Focus shadow */
+}
+
 /* Make the image container disappear on small screens */
 @media (max-width: 768px) {
     .hero-section .image-container {
         display: none;
     }
+    .hero-section .content {
+        text-align: center; /* Center the text */
+    }
+
+    .hero-section .btn {
+        display: block; /* Button becomes block-level */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; /* Center text inside the button */
+    }
 }
+/* Image Container Styles */
+.image-container {
+    width: 400px; /* Make the container take full width of its parent */
+    height: 400x; /* Fixed height or you can use `auto` to make it responsive */
+    max-width: 100%; /* Ensures it doesn't exceed its container width */
+    overflow: hidden; /* Hide any overflowing parts of the image */
+    position: relative;
+}
+
+/* Image Styles */
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: 100%; /* Forces the image to cover the container's height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Centers the image within the container */
+    transition: all 0.3s ease; /* Smooth transition for zoom or hover effect */
+}
+
+/* On hover, zoom the image a bit */
+.image-container:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
 /* Apply styles only to the food-section */
 #food-section {
     display: flex;
