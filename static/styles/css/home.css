@@ -1,39 +1,45 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+
+.logo-placeholder {
+    margin-bottom: 30px;
 }
 
+.logo-placeholder img.logo {
+    max-width: 150px;
+    display: inline-block;
+}
+
+.logo-img {
+    height: 90px; 
+    width: 170px;
+    object-fit: contain; 
+}
+/* end of logo */
 /* Navbar Styles */
-.navbar-toggler {
-    border-color: #fff; /* White border */
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* SVG icon with white lines */
-}
-
-
 .navbar {
-    background-color: #0f1724; 
+    background-color: #0f1724;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: slight elevation effect */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navbar.hidden {
-    transform: translateY(-100%); /* Moves navbar out of view */
-    opacity: 0; /* Optional: makes the transition more fluid */
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-nav .nav-link {
-    color: #d96b11; /* Orange link color */
+    color: #d96b11;
     font-size: 1rem;
     margin-right: 1rem;
     transition: color 0.3s ease;
@@ -41,45 +47,38 @@ body {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #d96b11; /* Highlight active or hovered links */
+    color: #d96b11;
     font-weight: bold;
 }
 
 .navbar-nav .btn {
-    background-color: #d96b11; /* Orange button */
+    background-color: #d96b11;
     color: #fff;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    margin-left: 1rem; /* Spacing between button and other nav links */
+    margin-left: 1rem;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 .navbar-nav .btn:hover {
-    background-color: #c05e0f; /* Slightly darker orange on hover */
-}
-
-/* Logo Styles */
-.logo-img {
-    height: 90px; /* Fixed height */
-    width: 170px;
-    object-fit: contain; 
+    background-color: #c05e0f;
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
-    background-color: #0f1724; 
-    border: 1px solid #333; /* Optional: Subtle border */
+    background-color: #0f1724;
+    border: 1px solid #333;
 }
 
 .dropdown-menu .dropdown-item {
-    color: #fff; /* White text for dropdown items */
+    color: #fff;
     font-size: 1rem;
 }
 
 .dropdown-menu .dropdown-item:hover {
-    color: #c05e0f; /* Orange highlight on hover */
-    background-color: #222; /* Slightly lighter background */
+    color: #c05e0f;
+    background-color: #222;
 }
 
 /* Offcanvas Styles */
@@ -89,34 +88,32 @@ body {
 }
 
 .offcanvas .offcanvas-title {
-    color: #c05e0f; /* Set the title color to orange */
-    text-align: center; /* Center-align the title */
+    color: #c05e0f;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     margin: auto;
 }
 
 .offcanvas .btn-close {
-    color: #fff; 
+    color: #fff;
 }
 
 .offcanvas-body .btn {
     font-size: 1rem;
     font-weight: 600;
 }
-
-
 .hero-section {
     position: relative;
     background: url('/static/images/photo_2024-12-05_13-01-15.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 2rem;
     color: #fff;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .hero-section::before {
@@ -126,16 +123,16 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit; /* Inherits the background image */
-    filter: blur(3px); /* Blurs only the background */
-    z-index: 1; /* Places the blur layer below content */
-    transform: scale(1.1); /* Prevents visible edges after blurring */
+    background: inherit;
+    filter: blur(3px);
+    z-index: 1;
+    transform: scale(1.1);
 }
 
 .hero-section .content,
 .hero-section .image-container {
     position: relative;
-    z-index: 2; /* Ensures the text and image are above the blurred background */
+    z-index: 2;
 }
 
 .hero-section .content {
@@ -154,8 +151,8 @@ body {
 }
 
 .hero-section .image-container {
-    width: 600px; /* Increase the width */
-    height: auto; 
+    width: 600px;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -166,95 +163,86 @@ body {
     height: auto;
 }
 
-
-/* button hero-section*/
-/* Default Slanted Button Styles */
 .hero-section .btn {
-    background-color: #fff; /* White background */
-    color: #333; /* Dark text color */
-    padding: 1rem 2rem; /* Spacious padding */
-    font-size: 1.2rem; /* Larger font size */
+    background-color: #fff;
+    color: #333;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 10px; /* Slight rounded corners */
+    border-radius: 10px;
     cursor: pointer;
-    display: flex; /* Flexbox to center the content */
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease; /* Smooth transition */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transform: skew(-15deg); /* Slant the button */
-    position: relative; /* To control icon placement */
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transform: skew(-15deg);
+    position: relative;
 }
 
-/* Button Hover Effect */
 .hero-section .btn:hover {
-    background-color: #f1f1f1; /* Light gray background on hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deep shadow on hover */
-    transform: skew(-15deg) translateY(-5px); /* Keep the slant and add slight lift */
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: skew(-15deg) translateY(-5px);
 }
 
-/* Button Icon Animation */
 .hero-section .btn i {
-    margin-left: 10px; /* Space between text and icon */
-    transition: transform 0.3s ease; /* Smooth icon transition */
+    margin-left: 10px;
+    transition: transform 0.3s ease;
 }
 
-/* Hover Animation for Icon */
 .hero-section .btn:hover i {
-    transform: translateX(5px); /* Move icon to the right */
+    transform: translateX(5px);
 }
 
-/* Focus Effect */
 .hero-section .btn:focus {
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Focus shadow */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
-/* Make the image container disappear on small screens */
 @media (max-width: 768px) {
     .hero-section .image-container {
         display: none;
     }
     .hero-section .content {
-        text-align: center; /* Center the text */
+        text-align: center;
     }
-
     .hero-section .btn {
-        display: block; /* Button becomes block-level */
+        display: block;
         margin-left: auto;
         margin-right: auto;
-        text-align: center; /* Center text inside the button */
+        text-align: center;
     }
 }
-/* Image Container Styles */
+
 .image-container {
-    width: 400px; /* Make the container take full width of its parent */
-    height: 400x; /* Fixed height or you can use `auto` to make it responsive */
-    max-width: 100%; /* Ensures it doesn't exceed its container width */
-    overflow: hidden; /* Hide any overflowing parts of the image */
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
-/* Image Styles */
 .image-container img {
-    width: 100%; /* Makes the image responsive */
-    height: 100%; /* Forces the image to cover the container's height */
-    object-fit: cover; /* Ensures the image covers the container without distortion */
-    object-position: center; /* Centers the image within the container */
-    transition: all 0.3s ease; /* Smooth transition for zoom or hover effect */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
 }
 
-/* On hover, zoom the image a bit */
 .image-container:hover img {
-    transform: scale(1.1); /* Slight zoom effect */
+    transform: scale(1.1);
 }
-
+/* end of hero-section */
 /* Apply styles only to the food-section */
 #food-section {
     display: flex;
+    background-color: black;
+    color: white;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -263,41 +251,45 @@ body {
 #food-section .masonry-grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column sizes */
-    grid-auto-rows: 250px; /* Control the row heights */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+}
+
+#food-section p {
+    color: white;
 }
 
 /* Specific item sizes */
 #food-section .masonry-item.large {
-    grid-column: span 2; /* Span 2 columns for large items */
-    grid-row: span 1; /* Span 2 rows for large items */
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
 #food-section .masonry-item.medium {
-    grid-column: span 1; /* Span 1 column */
-    grid-row: span 1; /* Span 1 row */
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 #food-section .masonry-item.small {
-    grid-column: span 1; /* Span 1 column */
-    grid-row: span 1; /* Span 1 row */
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
 #food-section .masonry-item.tall {
-    grid-column: span 2; /* Span 1 column */
-    grid-row: span 1; 
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
-/* Styling for the food titles */
+/* Title styling */
 #food-section .food-title {
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
-    margin-top: 16px; /* Space between title and image */
-    color: #333;
+    margin-top: 16px;
+    color: white;
 }
 
-/* Ensure the images adjust properly in their grid items */
+/* Styling for each masonry item */
 #food-section .masonry-item {
     display: flex;
     flex-direction: column;
@@ -305,26 +297,76 @@ body {
     justify-content: center;
 }
 
-/* Adjust the size of the masonry items */
+/* Image styling inside masonry items */
 #food-section .masonry-item img {
-    width: 100%;  /* Makes images responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 200px; /* Limit the height of images */
+    width: 100%;
+    height: auto;
+    max-height: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover; /* Ensures images fill their containers */
-    margin-top: 8px; /* Adds space between title and image */
+    object-fit: cover;
+    margin-top: 8px;
+}
+/* end of food-section */
+.dining-section {
+    background-color: #ff9a57;
+    color: white;
+}
+
+.dining-section h2 {
+    color: white;
+    margin-top: 30px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.dining-section .content p {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.dining-section .image1, 
+.dining-section .image2 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dining-section .image1 img, 
 .dining-section .image2 img {
     width: 100%;
     height: 200px;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 400px;
 }
-/*  */
+
+.dining-section .image1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 70%;
+    height: 350px;
+    object-position: 0px -20px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    z-index: 1;
+}
 
 .dining-section .image2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 70%;
+    height: 350px;
+    object-position: 0px -20px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    top: 70px;
+    left: 0px;
     transform: translate(20%, -20%);
 }
 
@@ -334,276 +376,419 @@ body {
     }
 }
 
-.grid-container {
+    .dining-section .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
-    grid-template-rows: 1fr 1fr;     /* 2 equal rows */
-    gap: 0; /* No gap between items */
-    position: relative;
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
-    grid-template-rows: 1fr 1fr;     /* 2 equal rows */
-    gap: 0; /* No gap between items */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
     position: relative;
 }
 
-/* First Image */
-.dining-section .image1 {
-    grid-column: 1 / 3; /* Span across both columns */
-    grid-row: 1 / 2;    /* Occupies the first row */
-    width: 70%;          /* Set width to 70% of its container */
-    height: 350px;        /* Automatically adjust height while maintaining aspect ratio */
-    object-position: 0px -20px;
-    object-fit: cover;   /* Ensures the image covers the entire area */
-    border-radius: 8px;
-    position: absolute;  /* Allows overlap */
-    top: 280px;          /* Adjust vertical position */
-    left: 200px;         /* Adjust horizontal position */
-    z-index: 1;          /* Ensure it overlaps on top of the second image */
+/* end of dining section */
+/* Wedding Section */
+#wedding-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Second Image */
-.dining-section .image2 {
-    grid-column: 1 / 3;  /* Span across both columns */
-    grid-row: 1 / 2;     /* Occupies the first row */
-    width: 70%;       /* Set width to 70% of its container */
-    height: 350px;        /* Automatically adjust height while maintaining aspect ratio */
-    object-position: 0px -20px;
-    object-fit: cover;   /* Ensures the image covers the entire area */
+#wedding-section {
+    background-color: #0f1724;
+}
+
+#wedding-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    margin: 30px;
+}
+
+#wedding-section .content p {
+    line-height: 1.6;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-left: 40px;
+    position: relative;
+}
+
+.wedding-section .image1, 
+.wedding-section .image2 {
     border-radius: 8px;
-    position: relative;  /* Allow the image to be positioned inside the grid */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-section .image1 img, 
+.wedding-section .image2 img {
+    width: 100%;
+    height: auto; /* Ensure images scale naturally */
+    max-width: 100%;
+}
+
+.wedding-section .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.wedding-section .image1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 70%;
+    height: 350px;
+    object-position: 0px -20px;
+    object-fit: cover;
+    position: absolute;
+    top: 280px;
+    left: 10px;
+    z-index: 1;
+}
+
+.wedding-section .image2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    width: 70%;
+    height: 350px;
+    object-position: 0px -20px;
+    object-fit: cover;
+    position: relative;
     z-index: 2;
-    top: 70px;           /* Adjust vertical position */
-    left: 0px;          /* Adjust horizontal position */
+    top: 70px;
+    left: 30px;
+    transform: translate(20%, -20%);
 }
 
-.dining-section {
-    background-color: #F9F6F1; /* Light Creamy Beige */
-    color: #333333; /* Charcoal Gray */
+@media (max-width: 768px) {
+    .wedding-section .image2 {
+        display: none;
+    }
+
+    .wedding-section .d-flex .col-md-6 {
+        flex: 1 1 100%; /* Make columns full width on mobile */
+        margin-bottom: 1.5rem;
+    }
+
+    #wedding-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/* Rooms Section */
+/* Center the title and paragraph in the Rooms Section */
+#rooms-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.dining-section h2 {
-    color: #8A1C2D; /* Deep Burgundy */
-    margin-top: 30px;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+#rooms-section p {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    text-align: center; /* Center the text */
+    margin-top: 20px; 
 }
 
-.dining-section .content p {
-    color: #333333; 
+
+
+#rooms-section .room-price p {
+    line-height: 1.6;
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 800px; /* Optional: set a max-width to prevent text from stretching too far */
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
 }
 
-.dining-section .btn {
-    background-color: #8A1C2D; /* Deep Burgundy for button */
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
+#rooms-section .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.dining-section .btn:hover {
-    background-color: #CDA15D; /* Warm Gold on hover */
+#rooms-section .d-flex .col-md-6 {
+    flex: 1 1 45%;
+    margin-bottom: 2rem;
 }
 
-.dining-section .image1, .dining-section .image2 {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
-}
-
-.amenities {
-    text-align: center;
-    margin-top: 50px;
-}
-.amenities h2 {
-    font-size: 24px;
+.room-price {
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 30px;
-}
-.amenities .icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-.amenities .item {
-    margin: 0 15px;
-}
-.amenities .item p {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* General Styles for the Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
     color: #333;
-}
-
-/* Section Background */
-#contact {
-    background-color: #ededed;
-    padding: 60px 20px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    position: relative;
-}
-
-/* Logo Styling */
-.logo-placeholder {
-    margin-bottom: 30px;
-}
-
-.logo-placeholder img.logo {
-    max-width: 150px;
-    display: inline-block;
-}
-
-/* General Title Styling */
-#contact h5 {
-    position: relative;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(90deg, #007bff, #0056b3);
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
+    margin-top: 1rem;
     text-align: center;
 }
 
-/* Content Styles (similar to previous CSS) */
-#contact p, #contact ul {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 5px 0;
+.room-details img {
+    border-radius: 8px;
+    width: 100%; /* Allow the image to fill the available space */
+    max-width: 400px; /* Optional: Set a maximum width to avoid being too large */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image crops neatly if needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+.room-details:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Adjust layout to give more space for larger images */
+.room-details {
+    text-align: center;
+    margin-bottom: 2rem; /* Add more spacing between items */
+}
+
+
+.amenities .item {
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.amenities .icon {
+    font-size: 2rem;
+    color: #d96b11;
+}
+
+.amenities .item:hover .icon {
+    color: #ff9a57;
+}
+
+.gallery-container {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Center text for headings and descriptions */
+.gallery-container h1,
+.gallery-container p {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+/* Styles for the Gallery Section */
+.gallery-container .gallery-section {
+    padding: 50px 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 40px auto; /* Centers the section horizontally */
+    border-radius: 15px;
+    text-align: center; /* Centers text inside the section */
+}
+
+/* Section Headings */
+.gallery-container .gallery-section h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Section Descriptions */
+.gallery-container .gallery-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Grid Layout for Gallery Items */
+.gallery-container .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Spacing between items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    margin-top: 20px;
+}
+
+/* Individual Gallery Items */
+.gallery-container .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling */
+.gallery-container .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+.gallery-container .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-container .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Weddings Section Specific Styles */
+.gallery-container .weddings-section {
+    background: linear-gradient(to bottom right, #f9f3f3, #fefefe);
+}
+
+.gallery-container .weddings-section h1 {
+    color: #8a4baf;
+}
+
+.gallery-container .weddings-section p {
+    color: #6c4685;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .gallery-container .gallery-section {
+        padding: 30px 15px;
+    }
+
+    .gallery-container .gallery-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-container .gallery-section p {
+        font-size: 1rem;
+    }
+
+    .gallery-container .gallery-grid {
+        gap: 15px;
+    }
+}
+/* contact us */
+/* Full-Width Footer Styling */
+#contact {
+    width: 100%; /* Ensure full-width */
+    margin: 0;
+    padding: 50px 20px;
+    background-color: #0e1724; /* Dark background */
+    color: #fff; /* White text */
+    box-sizing: border-box;
+}
+
+/* Centered Logo */
+#contact .logo-placeholder {
+    margin-bottom: 30px;
+}
+
+#contact .logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Column Styling */
+#contact h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fcbb38;
+    margin-bottom: 15px;
+}
+
+#contact p, #contact a {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+
+#contact a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #ff9a57;
+}
+
+/* Unordered List Styling */
 #contact ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #contact ul li {
-    margin-bottom: 10px;
-}
-
-#contact ul li a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
+    margin-bottom: 8px;
 }
 
 #contact ul li a:hover {
-    color: #0056b3;
+    color: #ff9a57;
+}
+
+/* Social Icons */
+#contact .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contact .social-icons a {
+    font-size: 1.5rem;
+    color: #fcbb38;
+    transition: color 0.3s ease;
+}
+
+#contact .social-icons a:hover {
+    color: white;
 }
 
 /* Newsletter Form */
 #contact .newsletter {
     display: flex;
+    gap: 10px;
     margin-top: 10px;
 }
 
-#contact .newsletter input[type="email"] {
+#contact .newsletter input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 20px 0 0 20px;
+    border-radius: 4px;
     outline: none;
 }
 
 #contact .newsletter button {
-    background-color: #007bff;
-    color: white;
+    background-color: #fcbb38;
+    color: #fff;
     border: none;
-    border-radius: 0 20px 20px 0;
     padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 #contact .newsletter button:hover {
-    background-color: #0056b3;
+    background-color: #e67c2d;
 }
 
-/* Social Icons */
-#contact .social-icons a {
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-#contact .social-icons a:hover {
-    color: #0056b3;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    #contact .row > div {
+    #contact .row {
+        flex-direction: column;
+    }
+
+    #contact .col-md-3 {
         margin-bottom: 20px;
     }
 }
 
-#order-voucher .step {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#order-voucher .step:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-#order-voucher .step-number {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: white;
-    display: inline-block;
-}
-
-#room-prices {
-    background-color: #f8f9fa;
-}
-
-.room-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.room-description p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.card {
-    overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.room-price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #007bff;
-    margin-top: 10px;
-}
