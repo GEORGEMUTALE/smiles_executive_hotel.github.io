@@ -372,17 +372,28 @@
 
 @media (max-width: 768px) {
     .dining-section .image2 {
-        display: none;
+        display: none; /* Hide image 2 */
+    }
+
+    .dining-section .image1 {
+        position: relative; /* Adjust position to flow with content */
+        top: 0;
+        left: 0;
+        width: 100%; /* Make it responsive */
+        height: auto;
+        margin: 20px auto; /* Center the image with spacing */
+    }
+
+    .dining-section .grid-container {
+        display: block; /* Switch to block layout for small screens */
+        text-align: center; /* Center-align the content */
+    }
+
+    .dining-section .content p {
+        width: 90%; /* Adjust paragraph width for small screens */
     }
 }
 
-    .dining-section .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0;
-    position: relative;
-}
 
 /* end of dining section */
 /* Wedding Section */
