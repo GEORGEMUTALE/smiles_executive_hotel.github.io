@@ -372,8 +372,14 @@
 
 @media (max-width: 768px) {
     .dining-section .image2 {
+<<<<<<< Updated upstream
         display: none;
     }
+=======
+        display: none; /* Hide image 2 */
+    }
+
+>>>>>>> Stashed changes
 }
 
     .dining-section .grid-container {
