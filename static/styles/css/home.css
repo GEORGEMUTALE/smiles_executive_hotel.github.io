@@ -1,19 +1,6 @@
-
-.logo-placeholder {
-    margin-bottom: 30px;
-}
-
-.logo-placeholder img.logo {
-    max-width: 150px;
-    display: inline-block;
-}
-
-.logo-img {
-    height: 90px; 
-    width: 170px;
-    object-fit: contain; 
-}
-/* end of logo */
+html {
+    scroll-behavior: smooth;
+  } 
 /* Navbar Styles */
 .navbar {
     background-color: #0f1724;
@@ -23,34 +10,48 @@
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+    display: flex; /* Align items in a row */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between logo and links */
 }
 
-.navbar.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
+/* Logo Styles */
+.logo-placeholder {
+    display: flex; /* Makes it flexible for better alignment */
+    align-items: center; /* Vertically center the logo */
+    margin-right: 2rem; /* Add spacing between logo and links */
 }
 
-.navbar-toggler {
-    border-color: #fff;
+.logo-img {
+    height: 90px; /* Set height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Adjust if necessary */
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* Navbar Links */
+.navbar-nav {
+    display: flex; /* Arrange links in a row */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav .nav-link {
     color: #d96b11;
     font-size: 1rem;
-    margin-right: 1rem;
+    margin-right: 1rem; /* Spacing between links */
     transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline */
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #d96b11;
+    color: #fff;
     font-weight: bold;
 }
 
+/* Button in Navbar */
 .navbar-nav .btn {
     background-color: #d96b11;
     color: #fff;
@@ -59,6 +60,7 @@
     margin-left: 1rem;
     border: none;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .navbar-nav .btn:hover {
@@ -74,6 +76,7 @@
 .dropdown-menu .dropdown-item {
     color: #fff;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -103,6 +106,37 @@
     font-size: 1rem;
     font-weight: 600;
 }
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .navbar-nav {
+        margin-top: 1rem; /* Add space above links */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0; /* Add spacing between vertical links */
+    }
+
+    .logo-placeholder {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add space below logo */
+    }
+}
+
 .hero-section {
     position: relative;
     background: url('/static/images/photo_2024-12-05_13-01-15.jpg') no-repeat center center;
@@ -245,6 +279,8 @@
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    padding-top: 150px;
+    margin-top: -70px;
 }
 
 /* Container holding the grid of items inside the food section */
@@ -311,6 +347,7 @@
 .dining-section {
     background-color: #ff9a57;
     color: white;
+    padding-top: 100px;
 }
 
 .dining-section h2 {
@@ -370,18 +407,52 @@
     transform: translate(20%, -20%);
 }
 
-@media (max-width: 768px) {
-    .dining-section .image2 {
-        display: none;
-    }
-}
-
 .dining-section .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0;
     position: relative;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* Hide image2 on small screens */
+    .dining-section .image2 {
+        display: none;
+    }
+
+    /* Move image1 above the content */
+    .dining-section .grid-container {
+        display: flex;
+        flex-direction: column; /* Stack content and image vertically */
+        align-items: center;
+    }
+
+    /* Adjust image1's styling */
+    .dining-section .image1 {
+        order: -1; /* Move image1 to the top */
+        width: 90%; /* Adjust the image width */
+        height: auto; /* Let the height adjust automatically */
+        max-height: 400px; /* Limit the height of the image */
+        position: static; /* Reset position styles for better flow */
+        top: auto; /* Remove absolute positioning */
+        left: auto; /* Remove absolute positioning */
+        z-index: 0; /* Reset z-index */
+        margin-bottom: 1rem; /* Adds space below the image */
+    }
+
+    /* Adjust the content section to be centered and below the image */
+    .dining-section .content {
+        margin-top: 1rem; /* Reduced space between image and content */
+        width: 90%; /* Ensure the content takes up 90% of the width */
+    }
+
+    /* Adjust padding inside the container */
+    .dining-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* end of dining section */
@@ -393,6 +464,7 @@
 
 #wedding-section {
     background-color: #0f1724;
+    padding-top: 100px;
 }
 
 #wedding-section h2 {
@@ -478,6 +550,10 @@
     }
 }
 /* Rooms Section */
+
+#rooms-section {
+    padding-top: 140px;
+}
 /* Center the title and paragraph in the Rooms Section */
 #rooms-section h2 {
     font-size: 2.5rem;
@@ -557,7 +633,7 @@
 }
 
 .amenities .icon {
-    font-size: 2rem;
+    font-size: 5rem;
     color: #d96b11;
 }
 
@@ -587,7 +663,9 @@
     max-width: 1200px;
     margin: 40px auto; /* Centers the section horizontally */
     border-radius: 15px;
-    text-align: center; /* Centers text inside the section */
+    text-align: center; 
+    padding-top: 150px;
+    /* Centers text inside the section */
 }
 
 /* Section Headings */
