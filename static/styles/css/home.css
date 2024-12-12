@@ -139,7 +139,6 @@ html {
 
 .hero-section {
     position: relative;
-    background-image: url("/smiles_executive_hotel.github.io/static/images/photo_2024-12-05_13-01-15.jpg") no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
