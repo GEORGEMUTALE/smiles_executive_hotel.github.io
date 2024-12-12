@@ -343,6 +343,29 @@ html {
     object-fit: cover;
     margin-top: 8px;
 }
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* Stack the items in a single column */
+    #food-section .masonry-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+
+    /* Adjust item size for small screens */
+    #food-section .masonry-item.large {
+        grid-column: span 1; /* All items should span 1 column */
+    }
+
+    #food-section .masonry-item.tall {
+        grid-column: span 1; /* Tall items should also span 1 column */
+    }
+
+    /* Optional: Adjust image size for small screens */
+    #food-section .masonry-item img {
+        max-height: 150px; /* Reduce the image height */
+    }
+}
+
 /* end of food-section */
 .dining-section {
     background-color: #ff9a57;
@@ -534,21 +557,40 @@ html {
     transform: translate(20%, -20%);
 }
 
+/* Media query for small screens */
 @media (max-width: 768px) {
-    .wedding-section .image2 {
+    /* Hide image1 */
+    .wedding-section .image1 {
         display: none;
     }
 
-    .wedding-section .d-flex .col-md-6 {
-        flex: 1 1 100%; /* Make columns full width on mobile */
-        margin-bottom: 1.5rem;
+    /* Make image2 appear above the content */
+    .wedding-section .image2 {
+        display: block; /* Ensure image2 is visible */
+        order: -1; /* Move image2 above the content */
+        margin-bottom: 1.5rem; /* Add space between image and content */
     }
 
+    /* Adjust grid container for stacking layout */
+    #wedding-section .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust container padding */
     #wedding-section .container {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    /* Adjust the content's margin on small screens */
+    .wedding-section .content {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
+
 /* Rooms Section */
 
 #rooms-section {
