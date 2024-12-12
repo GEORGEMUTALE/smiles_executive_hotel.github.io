@@ -139,9 +139,6 @@ html {
 
 .hero-section {
     position: relative;
-    background-image: url('static/images/photo_2024-12-05_13-01-15.jpg');
-     background-repeat: no-repeat; 
-    background-position: center center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
