@@ -557,39 +557,46 @@ html {
     transform: translate(20%, -20%);
 }
 
-/* Media query for small screens */
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
-    /* Hide image1 */
-    .wedding-section .image1 {
+    /* Hide image2 on small screens */
+    .wedding-section .image2 {
         display: none;
     }
 
-    /* Make image2 appear above the content */
-    .wedding-section .image2 {
-        display: block; /* Ensure image2 is visible */
-        order: -1; /* Move image2 above the content */
-        margin-bottom: 1.5rem; /* Add space between image and content */
-    }
-
-    /* Adjust grid container for stacking layout */
-    #wedding-section .row {
+    /* Move image1 above the content */
+    .wedding-section .grid-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack content and image vertically */
         align-items: center;
     }
 
-    /* Adjust container padding */
-    #wedding-section .container {
+    /* Adjust image1's styling */
+    .wedding-section .image1 {
+        order: -1; /* Move image1 to the top */
+        width: 90%; /* Adjust the image width */
+        height: auto; /* Let the height adjust automatically */
+        max-height: 400px; /* Limit the height of the image */
+        position: static; /* Reset position styles for better flow */
+        top: auto; /* Remove absolute positioning */
+        left: auto; /* Remove absolute positioning */
+        z-index: 0; /* Reset z-index */
+        margin-bottom: 1rem; /* Adds space below the image */
+    }
+
+    /* Adjust the content section to be centered and below the image */
+    .wedding-section .content {
+        margin-top: 1rem; /* Reduced space between image and content */
+        width: 90%; /* Ensure the content takes up 90% of the width */
+    }
+
+    /* Adjust padding inside the container */
+    .wedding-section .container {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    /* Adjust the content's margin on small screens */
-    .wedding-section .content {
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
+
 
 /* Rooms Section */
 
